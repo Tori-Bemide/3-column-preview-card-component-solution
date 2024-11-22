@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://github.com/Tori-Bemide/3-column-preview-card-component-solution)
 - Live Site URL: [Live Server]()
 
 ## My process
