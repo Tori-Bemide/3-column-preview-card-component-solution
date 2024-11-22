@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+=========================
+Fonts
+=========================
+ */
+@font-face {
+  font-family: "Lexend Deca";
+  src: url(../fonts/LexendDeca-VariableFont_wght.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url(../fonts/BigShouldersDisplay-VariableFont_wght.ttf) format(truetype);
+}
+
+/* 
+=========================
+Variables
+=========================
+ */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white/*paragraphs*/: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray/*background, headings, buttons*/: hsl(0, 0%, 95%);
+  --primary-font: "Lexend Deca";
+  --secondary-font: "Big Shoulders Display";
+  --border-radius: 0.5rem;
+}
+
+body {
+  background: var(--very-light-gray);
+  font-family: var(--primary-font);
+}
+h3 {
+  color: var(--very-light-gray);
+  font-family: var(--secondary-font);
+  margin: 1.25rem 0;
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.main {
+  margin: 5rem 1.5rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  max-width: 1100px;
+}
+
+.card {
+  justify-self: center;
+  background: var(--bright-orange);
+  padding: 2.5rem;
+}
+
+.card-1 {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.card-2 {
+  background: var(--dark-cyan);
+}
+
+.card-3 {
+  background: var(--very-dark-cyan);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.card p {
+  color: var(--transparent-white);
+  line-height: 1.85;
+  max-width: 14rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+  background: var(--very-light-gray);
+  color: var(--bright-orange);
+  text-transform: capitalize;
+  margin: 0.5rem 0;
+  padding: 0.75rem 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  color: var(--very-light-gray);
+  background: transparent;
+  border-color: var(--very-light-gray);
+}
+
+.btn-2 {
+  color: var(--dark-cyan);
+}
+
+.btn-3 {
+  color: var(--very-dark-cyan);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .main {
+    margin: 0 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-1{
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.card-3{
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+}
